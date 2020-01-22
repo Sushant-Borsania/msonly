@@ -1,12 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import Board from "./Components/Board";
+import "../src/index.scss";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Game = () => {
+  const [height, setHeight] = useState(16);
+  const [width, setWidth] = useState(16);
+  const [mines, setMines] = useState(40);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  return (
+    <div className="game">
+      <Board height={height} width={width} mines={mines} />
+    </div>
+  );
+};
+
+ReactDOM.render(<Game />, document.getElementById("root"));

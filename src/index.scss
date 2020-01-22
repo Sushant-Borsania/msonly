@@ -1,0 +1,56 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 20px;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f4f4f4;
+}
+.game {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  .game-info {
+    margin-bottom: 20px;
+    background: #19a0d9;
+    padding: 7px;
+    text-align: center;
+    color: #fff;
+    min-height: 100px;
+    border-radius: 7px;
+    .info {
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}
+
+.cell {
+  background: #434891;
+  border: 1px solid #fff;
+  float: left;
+  line-height: 45px;
+  height: 45px;
+  text-align: center;
+  width: 45px;
+  cursor: pointer;
+  border-radius: 5px;
+  // color: #fff;
+  font-weight: 600;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.is-flag,
+.is-mine {
+  background: #fc543c;
+  color: white;
+}
+.hidden {
+  background: #2e2829;
+}
